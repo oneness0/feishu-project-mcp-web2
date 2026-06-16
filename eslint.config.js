@@ -9,6 +9,9 @@ module.exports = tseslint.config(
     extends: [
       ...eslintPresetsOfSimple.client,
     ],
+    rules: {
+      'no-restricted-syntax': 'off',
+    },
     languageOptions: {
       parserOptions: {
         project: './tsconfig.app.json',

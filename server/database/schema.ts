@@ -1,4 +1,4 @@
-/* eslint-disable */
+
 /** auto generated, do not edit */
 import { customType } from "drizzle-orm/pg-core";
 import { sql } from "drizzle-orm";

@@ -1,45 +1,16 @@
 import React from 'react';
+import { SyncBranches } from './SyncBranches';
 
-const HomePage: React.FC = () => {
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="max-w-lg px-6 text-center">
-        <h1 className="text-4xl font-light tracking-tight text-primary">
-          Hello, World
-        </h1>
-        <p className="mt-4 text-base font-normal text-muted-foreground">
-          应用已就绪，开始构建你的想法
+    <div className="flex flex-col h-full">
+      <div className="mb-6">
+        <h1 className="text-xl font-semibold text-foreground">分支需求同步</h1>
+        <p className="text-sm text-muted-foreground mt-1">
+          将 GitLab feature 分支与飞书项目工作项进行关联同步
         </p>
       </div>
-      <style jsx>{`
-        @keyframes fade-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(16px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        h1 {
-          animation: fade-in-up 800ms ease-out both;
-        }
-
-        p {
-          animation: fade-in-up 800ms ease-out 200ms both;
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-          h1,
-          p {
-            animation: none;
-          }
-        }
-      `}</style>
+      <SyncBranches />
     </div>
   );
-};
-
-export default HomePage;
+}

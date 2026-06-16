@@ -11,7 +11,7 @@ async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule, {
     abortOnError: process.env.NODE_ENV !== 'development',
   });
-  await configureApp(app, { 
+  await configureApp(app, {
     disableSwagger: true,
   });
   const logger = new Logger('Bootstrap');

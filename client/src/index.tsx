@@ -10,6 +10,7 @@ import RoutesComponent from './app.tsx';
 import './index.css';
 import { createPortal } from 'react-dom';
 import { Toaster } from '@client/src/components/ui/sonner';
+import { McpProvider } from './hooks/use-mcp-context';
 
 const CLIENT_BASE_PATH = process.env.CLIENT_BASE_PATH || '/';
 
@@ -25,8 +26,10 @@ const MainApp = () => {
             />
           )}
         >
-          <RoutesComponent />
-          {createPortal(<Toaster />, document.body)}
+          <McpProvider>
+            <RoutesComponent />
+            {createPortal(<Toaster />, document.body)}
+          </McpProvider>
         </ErrorBoundary>
       </AppContainer>
     </BrowserRouter>

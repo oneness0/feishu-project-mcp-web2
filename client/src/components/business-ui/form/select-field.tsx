@@ -143,7 +143,7 @@ export function SelectField(props: SelectFieldProps) {
           {hasContent ? (
             children || (options && renderOptions(options))
           ) : (
-            // eslint-disable-next-line no-restricted-syntax
+             
             <SelectItem disabled value={''}>
               暂无选项
             </SelectItem>
